@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScriptBasics</title>
+</head>
+<body>
+<h1>スコープ</h1>
+<p>
+  定数・変数にはスコープ（有効範囲）がある。<br>
+  定数や変数がブロック内で宣言された場合、その定数や変数はこのブロックの中でだけ有効。<br>
+  ブロックの外で宣言した場合は全ての範囲で有効で、グローバルスコープと呼ぶ。<br>
+  ブロックの中で同名の定数が宣言されていた場合はそちらが優先される。<br>
+  if でも while でもブロックのあるところでは定数や変数のスコープが分かれる。
+</p>
+<h2>複数スクリプトファイルを読み込む場合</h2>
+<p>
+  script タグを分けて書いてもスコープが分かれるわけではない。<br>
+  同じ定数名を再び宣言できずにエラーになることがあるので、ブロックで囲ってスコープを分ける
+</p>
+<script src="js/main.js"></script>
+<script>
+  {
+    const y = 300;
+    console.log(y);
+  }
+</script>
+</body>
+</html>

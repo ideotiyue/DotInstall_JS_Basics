@@ -1,0 +1,21 @@
+:root {
+  --my-hue: 5;
+}
+
+body {
+  background: hsl(var(--my-hue), 80%, 90%);
+}
+
+h1 {
+  color: hsl(var(--my-hue), 80%, 30%);
+}
+
+ul {
+  list-style: none;
+  line-height: 2;
+}
+
+a {
+  color: hsl(var(--my-hue), 80%, 30%);
+  text-decoration: none;
+}
